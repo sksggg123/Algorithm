@@ -2,7 +2,7 @@ package algorithm;
 
 import java.util.Scanner;
 
-public class baekjoon_1748 {
+public class Baekjoon_1748 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

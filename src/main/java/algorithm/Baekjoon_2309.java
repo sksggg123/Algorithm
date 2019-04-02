@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class baekjoon_2309 {
+public class Baekjoon_2309 {
 
     static List<Integer> inputList = new ArrayList<>();
 

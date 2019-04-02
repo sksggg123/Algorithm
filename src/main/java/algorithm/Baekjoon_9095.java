@@ -2,10 +2,9 @@ package algorithm;
 
 import java.util.*;
 
-public class baekjoon_9095 {
+public class Baekjoon_9095 {
 
     static List<Integer> list = new ArrayList<>();
-    static Set<String> set = new HashSet<>();
     static int cnt = 0;
 
     public static void main(String[] args) {
@@ -17,8 +16,6 @@ public class baekjoon_9095 {
             arr[i] = sc.nextInt();
         }
         sc.close();
-
-        String str = "";
 
         for (int i = 0; i < arr.length; i++) {
             bfs(arr[i], 0, 1);

@@ -1,6 +1,6 @@
 package algorithm;
 
-public class baekjoon_2225 {
+public class Baekjoon_2225 {
     public static void main(String[] args) {
         int n = 20;
         int k = 2;
