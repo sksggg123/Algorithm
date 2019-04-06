@@ -37,6 +37,10 @@
 - 1,2,3 더하 https://www.acmicpc.net/problem/9095
 - [Baekjoon_9095](https://github.com/sksggg123/algorithm/blob/master/src/main/java/algorithm/Baekjoon_9095.java)
 
+#### 10973번
+- 이전 순열 https://www.acmicpc.net/problem/10973
+- [Baekjoon_10973](https://github.com/sksggg123/algorithm/blob/master/src/main/java/algorithm/Baekjoon_10973.java)
+
 #### 14500번  
 - 테트로미노 https://www.acmicpc.net/problem/14500
 - [Baekjoon_14500](https://github.com/sksggg123/algorithm/blob/master/src/main/java/algorithm/Baekjoon_14500.java)
