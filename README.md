@@ -27,6 +27,10 @@
 - 일곱난쟁이 https://www.acmicpc.net/problem/2309
 - [Baekjoon_2309](https://github.com/sksggg123/algorithm/blob/master/src/main/java/algorithm/Baekjoon_2309.java)
 
+#### 2529번 (시간초과.. 수정필요)  
+- 부등호 https://www.acmicpc.net/problem/2529
+- [Baekjoon_2529](https://github.com/sksggg123/algorithm/blob/master/src/main/java/algorithm/Baekjoon_2529.java)
+
 #### 3085번  
 - 사탕게임 https://www.acmicpc.net/problem/3085
 - [Baekjoon_3085](https://github.com/sksggg123/algorithm/blob/master/src/main/java/algorithm/Baekjoon_3085.java)
