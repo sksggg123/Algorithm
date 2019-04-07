@@ -1,6 +1,8 @@
 # algorithm
 :fire: 알고리즘 문제 풀이 :fire:
 
+[![HitCount](http://hits.dwyl.io/sksggg123/algorithm.svg)](http://hits.dwyl.io/sksggg123/algorithm)
+
 [ 정리형식 ]
 - 문제 URL
 - 문제 풀이 class file
