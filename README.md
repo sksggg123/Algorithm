@@ -39,9 +39,21 @@
 - 1,2,3 더하 https://www.acmicpc.net/problem/9095
 - [Baekjoon_9095](https://github.com/sksggg123/algorithm/blob/master/src/main/java/algorithm/Baekjoon_9095.java)
 
+#### 10819번
+- 다음 순열 https://www.acmicpc.net/problem/10972
+- [Baekjoon_10972](https://github.com/sksggg123/algorithm/blob/master/src/main/java/algorithm/Baekjoon_10972.java)
+
+#### 10972번
+- 차이를 최대로 https://www.acmicpc.net/problem/10819
+- [Baekjoon_10819](https://github.com/sksggg123/algorithm/blob/master/src/main/java/algorithm/Baekjoon_10819.java)
+
 #### 10973번
 - 이전 순열 https://www.acmicpc.net/problem/10973
 - [Baekjoon_10973](https://github.com/sksggg123/algorithm/blob/master/src/main/java/algorithm/Baekjoon_10973.java)
+
+#### 10974번
+- 모든 순열 https://www.acmicpc.net/problem/10974
+- [Baekjoon_10974](https://github.com/sksggg123/algorithm/blob/master/src/main/java/algorithm/Baekjoon_10974.java)
 
 #### 14500번  
 - 테트로미노 https://www.acmicpc.net/problem/14500
