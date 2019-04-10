@@ -4,6 +4,11 @@ import java.util.*;
 
 public class Baekjoon_1339 {
 
+    private static int MAX = 0;
+    private static Set<String> set = new HashSet<>();
+    private static int[] numList = new int[10];
+    static int MAX2 = 0;
+
     public static void main(String[] args) {
 
         // 1. input data setting
@@ -15,40 +20,85 @@ public class Baekjoon_1339 {
         }
         sc.close();
 
-        // 2. 0 ~ 9 까지의 숫자배열 생성 및 access array 셋팅
-        int[] numberList = new int[10];
-        boolean[] access = new boolean[10];
-        for (int i = 0; i < 10; i++) {
-            numberList[i] = i;
+        // 2. numList setting
+        int number = 9;
+        for (int i = 0; i < 10 ; i++) {
+            numList[i] = number;
+            number--;
         }
 
-        // 3. row max length 체크 및 Set Collection에 문자 셋팅 (중복제거)
-        int maxLength = 0;
-        int maxIndex = -1;
-        Set<String> set = new HashSet<>();
+        // 3. Set Collection에 문자 셋팅
         for (int i = 0; i < input.length ; i++) {
-            // 3-1 Set setting
             String[] temp = input[i].split("");
             for (String s : temp) {
                 set.add(s);
             }
-            // 3-2 max length 체크
-            if(maxLength < input[i].length()) {
-                maxLength = input[i].length();
-                maxIndex = i;
-            }
         }
 
-        // 4. 이차원 배열로 가로 : 세로 반전시켜서 초기화
-        String[][] revers = new String[maxLength][input.length];
-        int[][] reversNumberArray = new int[maxLength][input.length];
-        for (int i = 0; i < revers.length ; i++) {
-            for (int j = 0; j < input.length; j++) {
-
-            }
+        int cnt = 0;
+        // 문자열
+        String[] filter = new String[set.size()];
+        // 정수
+        int[] num = new int[set.size()];
+        // 접근 유무
+        boolean[] access = new boolean[set.size()];
+        Iterator<String> it = set.iterator();
+        while(it.hasNext()) {
+            filter[cnt] = it.next();
+            cnt++;
         }
 
+        // set.size 걸러낼수있는 조건 찾아야함..
+        if(set.size() == 10) {
+            System.out.println(45*input.length);
+        } else {
+            bfs(input, num, access, set.size(), 0);
+
+            System.out.println(MAX + " | " + MAX2);
+        }
+    }
+
+    // 9 ~ 0 의 숫자 중 Set Collection Size만큼만 추출하는 순열
+    public static void bfs(String[] input, int[] array, boolean[] access, int size, int cnt) {
+
+        if(size > cnt) {
+            for (int i = 0; i < size ; i++) {
+                if(!access[i]) {
+                    array[cnt] = numList[i];
+                    access[i] = true;
+                    bfs(input, array, access, size, cnt+1);
+                    access[i] = false;
+                }
+
+            }
+        } else {
+            sum(input, array);
+        }
 
     }
 
+    public static void sum(String[] input, int[] array) {
+        Iterator<String> it = set.iterator();
+        // 원본 배열 clone 한 후 작업
+        String[] temp = input.clone();
+        int cnt = 0;
+        int sum = 0;
+        // 중복없는 문자열을 가지고 입력받은 문자 replace
+        while(it.hasNext()) {
+            String str = it.next();
+            for (int i = 0; i < temp.length; i++) {
+                temp[i] = temp[i].replace(str, array[cnt]+"");
+            }
+            cnt++;
+        }
+        // 입력받은 row의 연산작업
+        for (int i = 0; i < temp.length; i++) {
+            MAX2++;
+            sum += Integer.parseInt(temp[i]);
+        }
+        // Max 값 비교작업
+        MAX = (MAX < sum) ? sum : MAX;
+    }
 }
+
+// 9864101

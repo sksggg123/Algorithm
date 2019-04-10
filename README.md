@@ -11,6 +11,10 @@
 - 리모컨 https://www.acmicpc.net/problem/1107
 - [Baekjoon_1107](https://github.com/sksggg123/algorithm/blob/master/src/main/java/algorithm/Baekjoon_1107.java)
 
+#### 1339번  (시간초과로인해 수정필요)
+- 단어 수학 https://www.acmicpc.net/problem/1339
+- [Baekjoon_1339](https://github.com/sksggg123/algorithm/blob/master/src/main/java/algorithm/Baekjoon_1339.java)
+
 #### 1476번  
 - 날짜계산 https://www.acmicpc.net/problem/1476
 - [Baekjoon_1476](https://github.com/sksggg123/algorithm/blob/master/src/main/java/algorithm/Baekjoon_1476.java)
