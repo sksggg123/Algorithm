@@ -80,5 +80,3 @@ public class Baekjoon_6603 {
         System.out.println();
     }
 }
-
-

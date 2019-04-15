@@ -43,6 +43,10 @@
 - 카잉달력 https://www.acmicpc.net/problem/6064
 - [Baekjoon_6064](https://github.com/sksggg123/algorithm/blob/master/src/main/java/algorithm/Baekjoon_6064.java)
 
+#### 6603번  
+- 로또 https://www.acmicpc.net/problem/6603
+- [Baekjoon_6603](https://github.com/sksggg123/algorithm/blob/master/src/main/java/algorithm/Baekjoon_6603.java)
+
 #### 9095번  
 - 1,2,3 더하 https://www.acmicpc.net/problem/9095
 - [Baekjoon_9095](https://github.com/sksggg123/algorithm/blob/master/src/main/java/algorithm/Baekjoon_9095.java)
@@ -67,4 +71,6 @@
 - 테트로미노 https://www.acmicpc.net/problem/14500
 - [Baekjoon_14500](https://github.com/sksggg123/algorithm/blob/master/src/main/java/algorithm/Baekjoon_14500.java)
 
-
+#### 14888번  
+- 연산자 끼워넣기 https://www.acmicpc.net/problem/14888
+- [Baekjoon_14888](https://github.com/sksggg123/algorithm/blob/master/src/main/java/algorithm/Baekjoon_14888.java)
