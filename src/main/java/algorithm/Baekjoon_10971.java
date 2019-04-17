@@ -46,8 +46,11 @@ public class Baekjoon_10971 {
         } else {
             // 접근 count가 n보다 클때 원래 지점으로 돌아오기
             // min 비교
-            sum += ROAD[i][start];
-            MIN = (MIN > sum) ? sum : MIN;
+            // 마지막 -> start 0 조건 체크 [스터디 조언사항] - > 추가로직 설계해보자
+            if (ROAD[i][start] != 0) {
+                sum += ROAD[i][start];
+                MIN = (MIN > sum) ? sum : MIN;
+            }
         }
     }
 }
