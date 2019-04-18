@@ -1,57 +1,51 @@
 package algorithm;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Baekjoon_13023 {
 
+    // match 조건
+    private static int matchCnt = 4;
+    private static int n;
+    private static int m;
+    private static int[][] input;
+    private static boolean[][] access;
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int m = sc.nextInt();
+        n = sc.nextInt();
+        m = sc.nextInt();
+        input = new int[n][n];
+        access = new boolean[n][n];
+        for (int i = 0; i < m; i++) {
+            int source = sc.nextInt();
+            int target = sc.nextInt();
+            int sourceSwapTarget = target;
+            int targetSwapSource = source;
 
-        List<Person> list = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            int before = sc.nextInt();
-            int after = sc.nextInt();
-            Person p = new Person(before, after);
-            list.add(p);
+            input[source][target] = 1;
+            input[sourceSwapTarget][targetSwapSource] = 1;
         }
         sc.close();
 
-        for (Person person : list) {
-            System.out.println(person.getBefore() + " | " + person.getAfter());
+        for (int i = 0; i < n; i++) {
+            check(0, i);
         }
 
+    }
 
+    private static void check(int depth, int originIndex) {
+        if(depth > matchCnt) {
+
+        } else {
+            for (int i = 0; i < n; i++) {
+                if(i!=n && input[originIndex][i] == 1 && access[originIndex][i]) {
+                    check(depth + 1, i);
+                } else if (i!=n && input[i][originIndex] == 1 && access[i][originIndex]) {
+                    check(depth + 1, originIndex);
+                }
+            }
+        }
     }
 }
 
-class Person {
-    private int before;
-    private int after;
-    private Person beP;
-    private Person afP;
-
-    Person(int before, int after) {
-        this.before = before;
-        this.after = after;
-    }
-
-    public Person getBeP() {
-        return beP;
-    }
-
-    public Person getAfP() {
-        return afP;
-    }
-
-    public int getBefore() {
-        return before;
-    }
-
-    public int getAfter() {
-        return after;
-    }
-}
