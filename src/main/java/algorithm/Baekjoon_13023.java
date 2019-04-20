@@ -12,6 +12,7 @@ public class Baekjoon_13023 {
     private static boolean[][] access;
 
     public static void main(String[] args) {
+        // input data
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
         m = sc.nextInt();
@@ -28,6 +29,7 @@ public class Baekjoon_13023 {
         }
         sc.close();
 
+        // 재귀호출 시작
         for (int i = 0; i < n; i++) {
             check(0, i);
         }
