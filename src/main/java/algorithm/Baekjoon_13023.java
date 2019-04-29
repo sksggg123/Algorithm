@@ -18,6 +18,8 @@ public class Baekjoon_13023 {
         m = sc.nextInt();
         input = new int[n][n];
         access = new boolean[n][n];
+        Map<Integer, List<Integer>> inputMap = new HashMap<>();
+        List<Integer> list = new ArrayList<>();
         for (int i = 0; i < m; i++) {
             int source = sc.nextInt();
             int target = sc.nextInt();
@@ -26,28 +28,15 @@ public class Baekjoon_13023 {
 
             input[source][target] = 1;
             input[sourceSwapTarget][targetSwapSource] = 1;
+
+
         }
         sc.close();
-
-        // 재귀호출 시작
-        for (int i = 0; i < n; i++) {
-            check(0, i);
-        }
 
     }
 
     private static void check(int depth, int originIndex) {
-        if(depth > matchCnt) {
 
-        } else {
-            for (int i = 0; i < n; i++) {
-                if(i!=n && input[originIndex][i] == 1 && access[originIndex][i]) {
-                    check(depth + 1, i);
-                } else if (i!=n && input[i][originIndex] == 1 && access[i][originIndex]) {
-                    check(depth + 1, originIndex);
-                }
-            }
-        }
     }
 }
 
