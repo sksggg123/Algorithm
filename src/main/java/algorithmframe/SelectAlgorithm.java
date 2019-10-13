@@ -27,7 +27,7 @@ public class SelectAlgorithm {
         main.run();
     }
 
-    public int[] run() {
+    public void run() {
 
         for (int targetIndex = 0; targetIndex < input.length -1; targetIndex++) {
             int min = Integer.MAX_VALUE;
@@ -43,7 +43,6 @@ public class SelectAlgorithm {
 
             if (targetIndex != minIndex) swap(targetIndex, minIndex);
         }
-        return null;
     }
 
     public void swap(int targetIndex, int sourceIndex) {
