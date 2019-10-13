@@ -14,6 +14,11 @@ import java.util.Arrays;
  */
 public class SelectAlgorithm {
 
+    /**
+     * 선택정렬 알고리즘 구현순서
+     * 1. 전달받은 숫자들 중 가장 작은값은 추출
+     * 2. 가장 작은값으로 추출된 값과 "정렬되지 않은" 가장 앞의 index의 값과 swap
+     */
     private static final String TARGET_INDEX_D_TARGET_NUM_D_SOURCE_INDEX_D_SOURCE_NUM_D = "targetIndex : %d\t targetNum : %d\t sourceIndex : %d\t sourceNum : %d";
     private static int[] input = {10, 6, 8, 4, 1, 5, 2, 9, 3, 7};
 
