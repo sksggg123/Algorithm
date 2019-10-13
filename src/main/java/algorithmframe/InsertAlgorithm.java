@@ -61,7 +61,6 @@ public class InsertAlgorithm {
 }
 
 /**
- * swap 결과
  * targetIndex : 0	 targetNum : 10	 sourceIndex : 1	 sourceNum : 6	==> 6 10 8 4 1 5 2 9 3 7
  * 외부 loop ---
  * targetIndex : 1	 targetNum : 10	 sourceIndex : 2	 sourceNum : 8	==> 6 8 10 4 1 5 2 9 3 7

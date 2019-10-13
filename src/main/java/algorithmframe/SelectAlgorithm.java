@@ -63,7 +63,6 @@ public class SelectAlgorithm {
 }
 
 /**
- * swap 결과
  * targetIndex : 0	 targetNum : 10	 sourceIndex : 4	 sourceNum : 1	==> 1 6 8 4 10 5 2 9 3 7
  * 외부 loop ---
  * targetIndex : 1	 targetNum : 6	 sourceIndex : 6	 sourceNum : 2	==> 1 2 8 4 10 5 6 9 3 7
