@@ -36,6 +36,7 @@ public class InsertAlgorithm {
 
             for (int targetIndex = startIndex-1; targetIndex >= 0 ; targetIndex--) {
                 if (targetValue < input[targetIndex]) {
+                    targetValue = input[targetIndex +1];
                     swap(targetIndex, targetIndex +1);
                 }
             }
@@ -57,3 +58,34 @@ public class InsertAlgorithm {
         System.out.println();
     }
 }
+
+/**
+ * swap 결과
+ * targetIndex : 0	 targetNum : 10	 sourceIndex : 1	 sourceNum : 6	==> 6 10 8 4 1 5 2 9 3 7
+ * targetIndex : 1	 targetNum : 10	 sourceIndex : 2	 sourceNum : 8	==> 6 8 10 4 1 5 2 9 3 7
+ * targetIndex : 2	 targetNum : 10	 sourceIndex : 3	 sourceNum : 4	==> 6 8 4 10 1 5 2 9 3 7
+ * targetIndex : 1	 targetNum : 8	 sourceIndex : 2	 sourceNum : 4	==> 6 4 8 10 1 5 2 9 3 7
+ * targetIndex : 0	 targetNum : 6	 sourceIndex : 1	 sourceNum : 4	==> 4 6 8 10 1 5 2 9 3 7
+ * targetIndex : 3	 targetNum : 10	 sourceIndex : 4	 sourceNum : 1	==> 4 6 8 1 10 5 2 9 3 7
+ * targetIndex : 2	 targetNum : 8	 sourceIndex : 3	 sourceNum : 1	==> 4 6 1 8 10 5 2 9 3 7
+ * targetIndex : 1	 targetNum : 6	 sourceIndex : 2	 sourceNum : 1	==> 4 1 6 8 10 5 2 9 3 7
+ * targetIndex : 0	 targetNum : 4	 sourceIndex : 1	 sourceNum : 1	==> 1 4 6 8 10 5 2 9 3 7
+ * targetIndex : 4	 targetNum : 10	 sourceIndex : 5	 sourceNum : 5	==> 1 4 6 8 5 10 2 9 3 7
+ * targetIndex : 3	 targetNum : 8	 sourceIndex : 4	 sourceNum : 5	==> 1 4 6 5 8 10 2 9 3 7
+ * targetIndex : 2	 targetNum : 6	 sourceIndex : 3	 sourceNum : 5	==> 1 4 5 6 8 10 2 9 3 7
+ * targetIndex : 5	 targetNum : 10	 sourceIndex : 6	 sourceNum : 2	==> 1 4 5 6 8 2 10 9 3 7
+ * targetIndex : 4	 targetNum : 8	 sourceIndex : 5	 sourceNum : 2	==> 1 4 5 6 2 8 10 9 3 7
+ * targetIndex : 3	 targetNum : 6	 sourceIndex : 4	 sourceNum : 2	==> 1 4 5 2 6 8 10 9 3 7
+ * targetIndex : 2	 targetNum : 5	 sourceIndex : 3	 sourceNum : 2	==> 1 4 2 5 6 8 10 9 3 7
+ * targetIndex : 1	 targetNum : 4	 sourceIndex : 2	 sourceNum : 2	==> 1 2 4 5 6 8 10 9 3 7
+ * targetIndex : 6	 targetNum : 10	 sourceIndex : 7	 sourceNum : 9	==> 1 2 4 5 6 8 9 10 3 7
+ * targetIndex : 7	 targetNum : 10	 sourceIndex : 8	 sourceNum : 3	==> 1 2 4 5 6 8 9 3 10 7
+ * targetIndex : 6	 targetNum : 9	 sourceIndex : 7	 sourceNum : 3	==> 1 2 4 5 6 8 3 9 10 7
+ * targetIndex : 5	 targetNum : 8	 sourceIndex : 6	 sourceNum : 3	==> 1 2 4 5 6 3 8 9 10 7
+ * targetIndex : 4	 targetNum : 6	 sourceIndex : 5	 sourceNum : 3	==> 1 2 4 5 3 6 8 9 10 7
+ * targetIndex : 3	 targetNum : 5	 sourceIndex : 4	 sourceNum : 3	==> 1 2 4 3 5 6 8 9 10 7
+ * targetIndex : 2	 targetNum : 4	 sourceIndex : 3	 sourceNum : 3	==> 1 2 3 4 5 6 8 9 10 7
+ * targetIndex : 8	 targetNum : 10	 sourceIndex : 9	 sourceNum : 7	==> 1 2 3 4 5 6 8 9 7 10
+ * targetIndex : 7	 targetNum : 9	 sourceIndex : 8	 sourceNum : 7	==> 1 2 3 4 5 6 8 7 9 10
+ * targetIndex : 6	 targetNum : 8	 sourceIndex : 7	 sourceNum : 7	==> 1 2 3 4 5 6 7 8 9 10
+ */
