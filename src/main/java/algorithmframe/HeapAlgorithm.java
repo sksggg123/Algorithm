@@ -11,9 +11,7 @@ package algorithmframe;
  * create date  : 2019-10-14 00:38
  */
 public class HeapAlgorithm {
-    static int[] mergeSort;
     public static void main(String[] args) {
-
 
         int arr[] = {10, 6, 8, 4, 1, 5, 2, 9, 3, 7};
         Heap heap = new Heap(arr.length+1);
